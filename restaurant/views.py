@@ -11,11 +11,11 @@ def home(request):
 def about(request):
     return render(request,"index.html",{})
 
-def book(request):
+def booking(request):
     return render(request,"index.html",{})
 
 def menu(request):
     return render(request,"index.html",{})
 
-def display_menu_item(request):
+def display_menu_item(request,pk):
     return render(request,"index.html",{})

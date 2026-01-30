@@ -5,6 +5,7 @@ urlpatterns =[
     # path('',views.sayHello,name="sayHello")
     path('',views.home,name="home"),
     path('about/',views.about,name="about"),
+    path('booking/',views.booking,name="booking"),
     path('menu/',views.menu,name="menu"),
     path('menu_item/<int:pk>/',views.display_menu_item,name="menu_item"),
 ]
