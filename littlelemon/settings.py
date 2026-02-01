@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'djoser',
     'reservation',
     'restaurant',
     'LittleLemonAPI',
@@ -114,7 +115,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
@@ -135,3 +144,5 @@ STATIC_URL = 'restaurant/static/'
 STATICFILES_DIRS =[
     "restaurant/static"
 ]
+
+DJOSER={"USER_ID_FIELD":"username"}
